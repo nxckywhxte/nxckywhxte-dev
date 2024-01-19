@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
-import { Fira_Sans } from 'next/font/google'
+import { Inter as FontSans } from 'next/font/google'
 import './globals.css'
 import { ReactNode } from 'react'
+import { cn } from '@/lib/utils'
 
-const font = Fira_Sans({
+const fontSans = FontSans({
   subsets: ['cyrillic', 'latin'],
-  weight: ['400']
+  variable: '--font-sans'
 })
 
 export const metadata: Metadata = {
@@ -15,8 +16,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang='ru'>
-      <body className={font.className}>{children}</body>
+    <html
+      lang='ru'
+      suppressHydrationWarning>
+      <body
+        className={cn(
+          'min-h-screen bg-background font-sans antialiased',
+          fontSans.variable
+        )}>
+        {children}
+      </body>
     </html>
   )
 }
