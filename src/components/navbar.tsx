@@ -5,13 +5,18 @@ import { AppLinks } from '@/components/app-links'
 
 export function Navbar() {
   return (
-    <nav className='flex items-center justify-between p-4 container mx-auto'>
-      <Logo title='nxckywhxte' />
-      <AppLinks />
-      <div className='flex items-center gap-4'>
-        <Button>Авторизоваться</Button>
-        <ThemeToggle />
-      </div>
-    </nav>
+    <div className='w-full shadow-md'>
+      <nav className='flex items-center justify-between py-4 px-4 container mx-auto'>
+        <Logo
+          title='Awesome Projects'
+          description={'created by @nxckywhxte'}
+        />
+        <AppLinks />
+        <div className='flex items-center gap-4'>
+          <Button>Авторизоваться</Button>
+          <ThemeToggle />
+        </div>
+      </nav>
+    </div>
   )
 }

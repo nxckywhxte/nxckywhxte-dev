@@ -4,6 +4,7 @@ import './globals.css'
 import { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/theme-provider'
+import { Navbar } from '@/components/navbar'
 
 const fontSans = FontSans({
   subsets: ['cyrillic', 'latin'],
@@ -22,7 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       suppressHydrationWarning>
       <body
         className={cn(
-          'min-h-screen bg-background font-sans antialiased',
+          'min-h-screen bg-background font-sans antialiased flex flex-col',
           fontSans.variable
         )}>
         <ThemeProvider
@@ -30,7 +31,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           defaultTheme='system'
           enableSystem
           disableTransitionOnChange>
-          {children}
+          <Navbar />
+          <main className='flex-1 flex'>{children}</main>
         </ThemeProvider>
       </body>
     </html>
