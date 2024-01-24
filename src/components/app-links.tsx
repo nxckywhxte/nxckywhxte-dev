@@ -14,9 +14,9 @@ export function AppLinks() {
           <Link
             href={link.pathname}
             className={cn(
-              'dark:hover:text-drOrange px-4 py-2',
+              'dark:hover:text-accent px-4 py-2',
               pathname === link.pathname
-                ? 'dark:border dark:border-drCurrentLine dark:rounded-md dark:bg-drCurrentLine/20 dark:text-drYellow dark:hover:text-drOrange'
+                ? 'dark:border dark:border-drCurrentLine dark:rounded-md dark:bg-drCurrentLine/20 dark:text-accent dark:hover:text-accent'
                 : ''
             )}>
             {link.title}

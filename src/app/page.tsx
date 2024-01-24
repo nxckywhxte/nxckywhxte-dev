@@ -1,3 +1,9 @@
+import { WelcomeSection } from '@/sections/welcome-section'
+
 export default function Home() {
-  return <section></section>
+  return (
+    <>
+      <WelcomeSection />
+    </>
+  )
 }

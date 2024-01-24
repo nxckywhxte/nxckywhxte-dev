@@ -1,4 +1,4 @@
-import { AppLinksProps } from '@/lib/types'
+import { AppLinksProps, DescriptionListProps } from '@/lib/types'
 
 export const appLinks: AppLinksProps[] = [
   {
@@ -20,5 +20,24 @@ export const appLinks: AppLinksProps[] = [
     key: 4,
     title: 'Контакты',
     pathname: '/contacts'
+  }
+]
+
+export const descriptionList: DescriptionListProps[] = [
+  {
+    id: 1,
+    title: 'Эффективная разработка с использованием последних технологий'
+  },
+  {
+    id: 2,
+    title: 'Постоянно пополняющийся список проектов'
+  },
+  {
+    id: 3,
+    title: 'Backend и Frontend разработка проектов'
+  },
+  {
+    id: 4,
+    title: 'Дружная команда и тяга к новым знаниям и умениям'
   }
 ]

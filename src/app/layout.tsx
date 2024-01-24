@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter as FontSans } from 'next/font/google'
+import { Fira_Code as FontSans } from 'next/font/google'
 import './globals.css'
 import { ReactNode } from 'react'
 import { cn } from '@/lib/utils'

@@ -3,3 +3,8 @@ export interface AppLinksProps {
   title: string
   pathname: string
 }
+
+export interface DescriptionListProps {
+  id: number
+  title: string
+}
